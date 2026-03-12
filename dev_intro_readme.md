@@ -89,7 +89,7 @@ PR must include:
 
 ⚠️ **Only the Project Lead performs these steps**
 
-
+```
 git checkout dev
 git pull origin dev
 
