@@ -14,8 +14,12 @@ export const verifyToken = async (req, res, next) => {
 
     const decoded = jwt.verify(token, process.env.SECRET);
     
-    // Find user to ensure they still exist and get the Mongoose _id
-    const user = await User.findOne({ userId: decoded.userId });
+    // Find user – fall back to email if userId is missing (legacy accounts)
+    const user = await User.findOne(
+      decoded.userId
+        ? { userId: decoded.userId }
+        : { email: decoded.email }
+    );
 
     if (!user) {
       return res.status(404).json({
