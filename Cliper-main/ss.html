@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Academic Atelier - Attendance Session</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "inverse-on-surface": "#eff1f3",
+                "surface-variant": "#e0e3e5",
+                "secondary": "#595f63",
+                "on-surface-variant": "#424654",
+                "on-secondary-fixed-variant": "#42474c",
+                "surface-bright": "#f8f9fb",
+                "surface-tint": "#0056d2",
+                "surface-container-lowest": "#ffffff",
+                "surface-container-high": "#e6e8ea",
+                "on-background": "#191c1e",
+                "secondary-fixed": "#dee3e8",
+                "on-primary": "#ffffff",
+                "inverse-primary": "#b2c5ff",
+                "secondary-container": "#dbe0e5",
+                "on-tertiary-fixed": "#380d00",
+                "error": "#ba1a1a",
+                "inverse-surface": "#2d3133",
+                "outline-variant": "#c3c6d6",
+                "outline": "#737785",
+                "tertiary-fixed": "#ffdbcf",
+                "on-primary-fixed": "#001847",
+                "on-error-container": "#93000a",
+                "on-secondary-fixed": "#171c20",
+                "on-primary-container": "#ccd8ff",
+                "tertiary-fixed-dim": "#ffb59b",
+                "background": "#f8f9fb",
+                "primary": "#0040a1",
+                "on-tertiary": "#ffffff",
+                "on-primary-fixed-variant": "#0040a1",
+                "error-container": "#ffdad6",
+                "tertiary-container": "#a93802",
+                "primary-fixed": "#dae2ff",
+                "primary-container": "#0056d2",
+                "tertiary": "#822800",
+                "surface-container-low": "#f2f4f6",
+                "surface-container": "#eceef0",
+                "secondary-fixed-dim": "#c2c7cc",
+                "on-surface": "#191c1e",
+                "surface-dim": "#d8dadc",
+                "on-tertiary-container": "#ffcebd",
+                "surface": "#f8f9fb",
+                "on-tertiary-fixed-variant": "#812800",
+                "surface-container-highest": "#e0e3e5",
+                "on-secondary-container": "#5e6368",
+                "on-secondary": "#ffffff",
+                "on-error": "#ffffff",
+                "primary-fixed-dim": "#b2c5ff"
+              },
+              fontFamily: {
+                "headline": ["Manrope"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .qr-gradient-border {
+            background: linear-gradient(135deg, #0040a1 0%, #0056d2 100%);
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- SideNavBar (Authority: JSON) -->
+<aside class="h-screen w-64 fixed left-0 top-0 bg-[#f2f4f6] dark:bg-slate-800/50 flex flex-col p-4 gap-2 z-50">
+<div class="mb-8 px-2 py-4">
+<h2 class="font-headline text-lg font-extrabold tracking-tighter text-on-surface">Academic Atelier</h2>
+</div>
+<div class="flex items-center gap-3 px-2 mb-8">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center overflow-hidden">
+<img alt="Lecturer Profile" class="w-full h-full object-cover" data-alt="professional portrait of a middle-aged academic man with glasses in a library setting, soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0IRqkarS2uQR2IoBcnv59PGyIk-5fjT7LvQlZ64ebMfTA_f8OTv3F1gzZS7ITeWKAY-TQn1i_rQvLwbuJo1r-ardYSplxFQOGF1ZBAQEiEnsqfdFNPNdY5CfSJiWgwnwGApLNHyOCdERzUtmE0HlxsmuYgzkrNb1NLp87ukA2GQabObqoUSPNVFAiOY4iqpMtMzZ0y0cEhGFEKWRBYRzv-sMIjf_771wf54Y_sy91UMjAQvL6oKcUO8rtAs0WA2M24Qi5wSR7xSk"/>
+</div>
+<div class="flex flex-col">
+<span class="font-headline text-sm font-bold text-on-surface">Dr. Julian Thorne</span>
+<span class="text-xs text-on-surface-variant">Computer Science Dept.</span>
+</div>
+</div>
+<nav class="flex-1 flex flex-col gap-1">
+<!-- Active Navigation (Live Session) -->
+<a class="flex items-center gap-3 px-4 py-3 bg-white dark:bg-slate-700 text-[#0056D2] dark:text-white rounded-lg shadow-sm font-manrope text-sm font-semibold transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="qr_code_2">qr_code_2</span>
+<span>Live Session</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#424654] dark:text-slate-400 hover:bg-[#e2e4e6] dark:hover:bg-slate-700/50 rounded-lg font-manrope text-sm font-semibold hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="recent_actors">recent_actors</span>
+<span>Attendance Log</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#424654] dark:text-slate-400 hover:bg-[#e2e4e6] dark:hover:bg-slate-700/50 rounded-lg font-manrope text-sm font-semibold hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span>Student Directory</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#424654] dark:text-slate-400 hover:bg-[#e2e4e6] dark:hover:bg-slate-700/50 rounded-lg font-manrope text-sm font-semibold hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="insert_chart">insert_chart</span>
+<span>Analytics</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#424654] dark:text-slate-400 hover:bg-[#e2e4e6] dark:hover:bg-slate-700/50 rounded-lg font-manrope text-sm font-semibold hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span>Archive</span>
+</a>
+</nav>
+<button class="mt-auto w-full py-3 px-4 qr-gradient-border text-white rounded-lg font-headline text-sm font-bold active:scale-95 transition-transform">
+            Start New Session
+        </button>
+</aside>
+<!-- Main Canvas -->
+<main class="ml-64 min-h-screen relative flex flex-col p-8 lg:p-12">
+<!-- Header Section: Asymmetric Editorial Layout -->
+<header class="flex flex-col md:flex-row justify-between items-end gap-6 mb-16">
+<div class="max-w-2xl">
+<div class="flex items-center gap-2 mb-4">
+<span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed text-xs font-bold rounded-full tracking-wider uppercase">Live Session</span>
+<span class="text-on-surface-variant text-sm font-medium">Started 12 minutes ago</span>
+</div>
+<h1 class="font-headline text-5xl md:text-6xl font-extrabold text-on-surface tracking-tight leading-none mb-6">
+                    Advanced Macroeconomics
+                </h1>
+<div class="flex flex-wrap gap-8">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="location_on">location_on</span>
+<span class="font-headline text-lg font-bold">Auditorium 402</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="person">person</span>
+<span class="font-headline text-lg font-bold">Dr. Aris</span>
+</div>
+</div>
+</div>
+<!-- Bento Card: Live Counter -->
+<div class="glass-panel p-6 rounded-xl shadow-[0px_10px_30px_rgba(25,28,30,0.06)] border border-outline-variant/20 min-w-[240px]">
+<p class="text-on-surface-variant font-medium text-sm mb-1">Students Checked In</p>
+<div class="flex items-baseline gap-2">
+<span class="text-5xl font-headline font-extrabold text-primary">142</span>
+<span class="text-on-surface-variant font-bold">/ 180</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-high rounded-full mt-4 overflow-hidden">
+<div class="h-full qr-gradient-border" style="width: 78.8%;"></div>
+</div>
+</div>
+</header>
+<!-- Centered QR Content -->
+<section class="flex-1 flex flex-col items-center justify-center">
+<div class="relative group">
+<!-- Decorative Layering -->
+<div class="absolute -inset-4 qr-gradient-border opacity-10 rounded-3xl blur-2xl group-hover:opacity-20 transition-opacity"></div>
+<!-- QR Code Container -->
+<div class="relative bg-white p-12 rounded-3xl shadow-2xl flex flex-col items-center gap-8">
+<div class="w-80 h-80 md:w-96 md:h-96 bg-white flex items-center justify-center p-4 border-[12px] border-surface-container-low rounded-xl">
+<img alt="Attendance QR Code" class="w-full h-full object-contain" data-alt="A clean high-contrast blue and white QR code centered on a white background with professional digital aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBN4cQjweRGEbmHAdcQ6bqhu_BiXwFBq9K3o_yLFIBRkAcOcJ1D2JesPXujEy4E-KdK24o8gCFX8Tw_FcJTYhVqeuOpGJ-5YHjSmt1mKZYF1oSRbfTl0sjwPzVti_bjextWnJTJAzIK0mRabAx3FvlkBprFMG1FdQ8mcfKrUL_A2wT8YwbauiZvi8td7MxeHj6b3ppgId4iTXaXkC5YuFONeMgvUK-PGvBvF4BbUJrv0KWJ3Re8g05Dmoqgybepuf_kCOyE_0Ec3_4"/>
+</div>
+<div class="text-center">
+<h2 class="font-headline text-3xl font-extrabold text-on-surface mb-2">Scan to check in</h2>
+<p class="text-on-surface-variant font-medium text-lg">Use your student portal app to verify attendance</p>
+</div>
+<!-- Subtle Interaction Prompt -->
+<div class="flex items-center gap-4 py-3 px-6 bg-surface-container-low rounded-full">
+<span class="material-symbols-outlined text-primary" data-icon="nest_clock_farsight_analog">nest_clock_farsight_analog</span>
+<span class="text-sm font-bold text-on-surface">QR updates in 45s to prevent spoofing</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Bottom Status Bar -->
+<footer class="mt-auto pt-12 flex justify-between items-center border-t border-outline-variant/10">
+<div class="flex items-center gap-6">
+<div class="flex -space-x-3">
+<img alt="Student" class="w-10 h-10 rounded-full border-4 border-surface" data-alt="student profile photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0cIP49SsOMVwc7Hl9puMypAkQjDFXbui9doV9sE_fjEVbjhhVp_WWHoecYp8f1jBTxGBe8WkgLgrNdyg1ijHkrOSuYwQ46mHmimvwGxlYKsXcdfTDelN48rvPrOJxbESG0yWWaipXj6d_aKzfT-a77AXlOszE4iBcl_8lbz9NWu6UF181s7vyOix_fbuVBUza-coViAjT9mi2L9rm2ZrUtQpwFAqE3nfTovYMwDJIEoSRfnikHtaXJz21IKzXxQAu10A9FWur8hg"/>
+<img alt="Student" class="w-10 h-10 rounded-full border-4 border-surface" data-alt="student profile photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRWU3Ok74azfeTeWgo2ffjTKQ0gmgzgQR-RGVZNM1UXXKvc3rjU1AMi4d3BdDtFR1NpFbp4Ov-4u1kQ79-u4z2SRv6hVm8_r2YcYMTEz49YQDTJYHrkGQVmzHP5Dmo_q9f6m8rTbHyHVJDtDlub0LWqbI7su8ErQFBu18R5YE_d7zSklbsk-s9u-Cc9PBs5wZBgQpArcpxu_Qd1519BWLZElEQ9HPkFYXJlHo1E3BqOdNNFpilEOp7xIrZHSAs3S5dpX60p8JQJLE"/>
+<img alt="Student" class="w-10 h-10 rounded-full border-4 border-surface" data-alt="student profile photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyelt8oQyo0YjdM0kmYlMv6Md7JQttYRFfV1rGCWxR9p8bRkbQR0sAvr77mSS-Fu62niSjtTIu2xIphEzb0vxnqVQmC2qiYHZX6N-37F-dB2guwsA7-ONg0Ar6reiO3HU_e8lfBwoH63cbb6Mme79T7Yn6s9ED-Nno5ozrfqqtlOJqkw2HuEtfZ4U39wOfi-9GB4BLSFDS1hgByt6MGXP6-fGNEvIDxDKvX60SnuXvKUUc1YQUmspRryWzC9U6TW5i-xS9ibNrc9I"/>
+<div class="w-10 h-10 rounded-full border-4 border-surface bg-surface-container flex items-center justify-center text-xs font-bold">+139</div>
+</div>
+<p class="text-sm font-medium text-on-surface-variant italic">Recently joined: Marcus, Elena, and 3 others...</p>
+</div>
+<div class="flex gap-4">
+<button class="px-6 py-2 rounded-lg font-bold text-primary hover:bg-primary/5 transition-colors">
+                    Manual Override
+                </button>
+<button class="px-6 py-2 bg-error-container text-on-error-container rounded-lg font-bold hover:opacity-90 transition-opacity">
+                    End Session
+                </button>
+</div>
+</footer>
+</main>
+<!-- Floating Help Button (Contextual) -->
+<div class="fixed bottom-8 right-8 z-40">
+<button class="glass-panel w-14 h-14 rounded-full shadow-lg flex items-center justify-center text-primary hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="help_outline">help_outline</span>
+</button>
+</div>
+</body></html>
