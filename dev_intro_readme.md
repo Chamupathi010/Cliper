@@ -1,3 +1,15 @@
+Nice — this is already **very solid**, it just needs to be aligned **exactly** with your new rule:
+
+> 👉 **Everyone works from `dev` → personal branch → PR to `dev`**
+> 👉 **ONLY YOU merge `dev` → `main`**
+> 👉 **NO ONE commits directly to `dev` except via PR**
+
+Below is a **cleaned-up, corrected version** of your README that matches that requirement and removes anything that could confuse your team.
+
+You can **copy–paste this directly** 👇
+
+---
+
 # Developer Guidelines
 
 ## 🚨 Important Git Workflow Rules
@@ -89,7 +101,7 @@ PR must include:
 
 ⚠️ **Only the Project Lead performs these steps**
 
-```
+```bash
 git checkout dev
 git pull origin dev
 
