@@ -1,15 +1,21 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from '../pages/home';
-import './index.css';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css";
+import "./index.css"; // or "./App.css" if your styles are there
+
+import CourseModules from "./Componenets/CourseModules/coursemoduels";
+import AdminPanel from "./Componenets/CourseModules/AdminPanelModules";
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
-    </Router>
+    <BrowserRouter>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<CourseModules />} />
+          <Route path="/adminmodules" element={<AdminPanel />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
