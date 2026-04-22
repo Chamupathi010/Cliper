@@ -1431,7 +1431,7 @@ const AdminPanel = () => {
                       {newMaterial.type === "pdf" && (
                         <div>
                           <label className="block text-xs font-medium text-gray-700 mb-1">
-                            Pages <span className="text-red-500">* (1-1000)</span>
+                            Pagess <span className="text-red-500">* (1-1000)</span>
                           </label>
                           <input
                             type="number"
