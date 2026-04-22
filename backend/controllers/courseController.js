@@ -7,7 +7,7 @@ const Module = require('../model/Module');
 exports.getAllCourses = async (req, res) => {
   try {
     const courses = await Course.find().populate({
-      path: 'yearss.semesters.modules',
+      path: 'years.semesters.modules',
       model: 'Module'
     });
     res.status(200).json(courses);
