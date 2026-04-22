@@ -45,15 +45,5 @@ const materialSchema = new mongoose.Schema({
       message: 'Exercises must be between 1 and 100 for code materials'
     }
   },
-  module: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Module',
-    required: true
-  },
-  createdAt: {
-    type: Date,
-    default: Date.now
-  }
-});
-
+ 
 module.exports = mongoose.model('Material', materialSchema);
