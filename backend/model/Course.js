@@ -20,13 +20,7 @@ const yearSchema = new mongoose.Schema({
   semesters: [semesterSchema]
 });
 
-const courseSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: true,
-    unique: true,
-    trim: true
-  },
+
   color: {
     type: String,
     default: '#0056D2'
